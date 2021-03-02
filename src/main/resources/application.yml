@@ -1,0 +1,21 @@
+spring:
+  profiles:
+    active: dev
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/mybatis_plus?useUnicode=true&characterEncodeing=UTF-8&useSSL=false&serverTimezone=GMT
+    username: root
+    password: root
+logging:
+  level:
+    com.leg.test.mapper: debug
+mybatis-plus:
+  type-aliases-package: com.leg.test.pojo
+  global-config:
+    db-config:
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+server:
+  port: 8080
